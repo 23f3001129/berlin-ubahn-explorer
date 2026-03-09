@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Berlin U-Bahn Explorer</title>
-
-<style>
-body{
-margin:0;
-overflow:hidden;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die U-Bahnstation</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import map for Three.js -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
 </head>
-
 <body>
-
-<script type="module" src="./main.js"></script>
-
+    <div id="instructions">
+        <div class="content">
+            <h1>Die U-Bahnstation</h1>
+            <p>Click to start the exploration</p>
+            <div class="controls">
+                <span><strong>W A S D</strong> to move</span>
+                <span><strong>SPACE</strong> to jump</span>
+                <span><strong>MOUSE</strong> to look around</span>
+            </div>
+            <p class="small-text">(Place your `ubahn.glb` model in the root folder, currently loading fallback if missing)</p>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
 </body>
-
 </html>
