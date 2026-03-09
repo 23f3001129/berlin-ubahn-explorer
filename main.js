@@ -47,7 +47,7 @@ document.body.appendChild( renderer.domElement );
 
 // ---- PHYSICS & WORLD ----
 const worldOctree = new Octree();
-const playerCollider = new Capsule( new THREE.Vector3( 0, 0.35, 0 ), new THREE.Vector3( 0, 1.45, 0 ), 0.35 ); 
+const playerCollider = new Capsule( new THREE.Vector3( 0, 1.35, 0 ), new THREE.Vector3( 0, 2.45, 0 ), 0.35 ); 
 
 // ---- PLAYER KINETICS & MOMENTUM ----
 const playerVelocity = new THREE.Vector3();
