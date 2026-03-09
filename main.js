@@ -14,7 +14,7 @@ scene.fog = new THREE.Fog( 0x111115, 0, 70 );
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.rotation.order = 'YXZ';
 
-const ambientLight = new THREE.AmbientLight( 0xffffff, 0.3 );
+const ambientLight = new THREE.AmbientLight( 0xffffff, 2.0 );
 scene.add( ambientLight );
 
 const directionalLight = new THREE.DirectionalLight( 0xfffae6, 1.0 );
@@ -70,9 +70,8 @@ const instructions = document.getElementById( 'instructions' );
 
 document.addEventListener( 'click', () => {
     controls.lock();
-} );
-
-controls.addEventListener( 'lock', () => {
+    
+    // Hide instructions immediately on click, bypassing browser block restrictions
     instructions.style.opacity = '0';
     setTimeout(() => instructions.style.display = 'none', 300);
 } );
